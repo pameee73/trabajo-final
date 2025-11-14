@@ -78,4 +78,4 @@ Antecedentes
 
 
 Moodboard 
-![usuario 1](mood board.png)
+![moodboard](moodboard.png)
