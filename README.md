@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="Gemini_Generated_Image_a0kdpua0kdpua0kd" src="https://github.com/user-attachments/assets/48278631-110c-4832-bdf4-40b0be049ca6" /># trabajo-final
+
 
 1. ¿Para qué es esta propuesta? (Objetivo general)
 
@@ -60,3 +60,14 @@ Visita muchos portafolios al día. Valora una estructura limpia, navegación rá
 Necesidades y metas
 
 Identificar de inmediato tu estilo y tus capacidades. Revisar tus proyectos de manera ordenada. Evaluar si calzas con un puesto, práctica o colaboración profesional.
+
+
+
+----
+
+Antecedentes 
+| ANTECEDENTE | IMAGEN(ES) | QUÉ ES | FUENTE | ASPECTOS POSITIVOS | ASPECTOS NEGATIVOS |
+|-------------|------------|---------|---------|-------------------|-------------------|
+| **1 — shchebet.design** | Portafolio con navegación dinámica, transiciones fluidas y diseño minimalista. (Puedes poner captura de la home o del scroll interactivo.) | Portafolio personal interactivo de un diseñador digital, que combina animaciones suaves, tipografía limpia y navegación minimal. | [shchebet.design](https://shchebet.design) | • Interactividad clara pero no saturada<br>• Animaciones suaves que acompañan la experiencia<br>• Uso inteligente del espacio en blanco<br>• Navegación intuitiva y moderna | • Puede ser muy "visual" y menos informativo<br>• Algunas animaciones pueden tardar en cargar<br>• Menú poco evidente para usuarios menos digitales |
+| **2 — Portfolio 2025 (Behance)** | Mockups del portafolio, estructura modular, tipografías grandes y diseño limpio. (Poner captura de Behance.) | Proyecto de portafolio conceptual que destaca por su estética simple, uso de grilla y disposición clara de proyectos. | [Behance — PORTFOLIO 2025](https://www.behance.net) | • Organización visual muy clara<br>• Jerarquía tipográfica fuerte y coherente<br>• Minimalista sin perder personalidad<br>• Permite recorrer los proyectos rápido | • Menos interactivo que otros referentes<br>• Puede sentirse demasiado estático<br>• Algunos proyectos no se contextualizan bien |
+| **3 — every-day.nl** | Sitio con animaciones controladas, navegación horizontal/vertical y estilo editorial limpio. (Captura del sitio.) | Web interactiva de un estudio creativo que combina diseño minimal con microinteracciones y contenido bien estructurado. | [every-day.nl](https://every-day.nl) | • Buen equilibrio entre interactividad y orden<br>• Microinteracciones delicadas que guían la experiencia<br>• Sensación profesional y contemporánea<br>• Se siente ligero y fácil de navegar | • Puede confundirse con un diseño "muy corporativo"<br>• Algunas secciones requieren scroll largo<br>• No siempre es evidente dónde empezar a leer |
