@@ -6,7 +6,8 @@ Crear un portafolio web profesional que presente de manera clara, atractiva y ac
 
 2. ¿Para quien es esta propuesta?
 - UUSUARIO EXTREMO 1
-![Texto alternativo](usuario2.png)
+![Texto alternativo](usuario2.png)(imagen generada con ia)
+
 Demografía
 
 Programador joven, muy orientado a la funcionalidad y la eficiencia. No le interesa mucho el diseño, pero sí la estructura y el rendimiento del sitio.
@@ -24,7 +25,7 @@ Necesidades y metas
 Ver claridad técnica y estructura sólida. Confirmar que el sitio está optimizado y responde rápido. Sentir que es un portafolio profesional desde lo funcional.
 
 - USUARIO EXTREMO 2
-![Texto alternativo](usuario3.png)
+![Texto alternativo](usuario3.png) (imagen generada con ia)
  
  Demografía
 
@@ -45,6 +46,7 @@ Conocer tu propuesta de valor en pocos segundos. Ver proyectos presentados con i
 
 - USUARIO PROMEDIO
 ![usuario 1](usuario1.png) (imagen generada con ia)
+
 Demografía
 
 Diseñadora o reclutadora creativa que revisa portafolios con frecuencia para evaluar talento. Busca claridad y profesionalismo.
