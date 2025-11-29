@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Pame Jorquera</title>
+    <link rel="stylesheet" href="sobremi.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+            <li><a href="index.html#indice">Índice</a></li>
+           
+        </ul>
+        <div class="nav-center">Portafolio</div>
+        <a href="contacto.html" class="btn-contacto">Contacto</a>
+    </nav>
+
+    <!-- Contenedor principal con scroll -->
+    <div class="scroll-container">
+        <!-- Foto que se mueve (sticky) -->
+        <div class="foto-sticky" id="foto-movil">
+            <img src="img/pame.webp" alt="Pamela Jorquera">
+        </div>
+
+        <!-- Sección 1: Título y descripción centrados -->
+        <section class="seccion-scroll seccion-1" data-section="1">
+            <div class="contenido-centrado">
+                <h1>Sobre<br>mí</h1>
+                <p class="descripcion">
+                    ¡Hola! Soy Pamela Jorquera, estudiante de Diseño Integral 
+                    en la Pontificia Universidad Católica de Chile, actualmente 
+                    cursando mi quinto semestre.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección 2: Texto grande a la derecha -->
+        <section class="seccion-scroll seccion-2" data-section="2">
+            <div class="texto-derecha">
+                <h2>Sobre<br>mí</h2>
+                <p class="frase-grande">
+                    Me interesa el diseño como una 
+                    herramienta para observar, 
+                    conectar y transformar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Texto descriptivo a la derecha -->
+        <section class="seccion-scroll seccion-3" data-section="3">
+            <div class="texto-derecha">
+                <h2>Sobre<br>mí</h2>
+                <p class="texto-final">
+                    Me apasionan los proyectos que involucran narrativas visuales, 
+                    identidades gráficas y la aplicación del diseño desde lo cotidiano 
+                    hasta lo simbólico. Estoy siempre persona altamente adaptativa 
+                    dentro del diseño.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="sobre-mi-footer">
+        <p>&copy; 2024 Pame Jorquera - Diseñadora Integral</p>
+        <p class="email">pamela.jorquera@uc.cl</p>
+    </footer>
+
+    <script src="sobremi.js"></script>
+</body>
+</html>

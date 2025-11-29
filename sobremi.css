@@ -1,0 +1,285 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Serif 4", serif;
+    background-color: #efecea;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #efecea;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d4a5a5;
+}
+
+.nav-links .active {
+    text-decoration: underline;
+}
+
+.nav-center {
+    font-size: 18px;
+    font-weight: bold;
+      margin-right: 350px;
+
+}
+
+.btn-contacto {
+    background-color: #f5c9c9;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #f0b0b0;
+}
+
+/* Contenedor principal */
+.scroll-container {
+    position: relative;
+    min-height: 300vh;
+}
+
+/* Foto sticky que se mueve */
+
+  .foto-sticky {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 450px;
+    border: 3px solid #333;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;  /* Cambiar de 10 a 1 para que esté DETRÁS */
+    transition: all 0.6s ease;
+}
+}
+
+.foto-sticky img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cuando la foto está a la izquierda */
+.foto-sticky.moved-left {
+    left: 200px;
+    transform: translate(0, -50%);
+    width: 300px;
+    height: 400px;
+}
+
+/* Secciones de scroll */
+.seccion-scroll {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 100px 50px;
+}
+
+/* Sección 1: Contenido centrado */
+.seccion-1 {
+    padding-top: 150px;
+}
+
+
+   .contenido-centrado {
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 20;  /* Más alto que la foto para que esté ENCIMA */
+    background-color: #efecea;  /* Agregar fondo para tapar la foto */
+    padding: 20px;
+}
+}
+
+.contenido-centrado h1 {
+    font-family: "Source Serif 4", serif;
+    font-size: 80px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 350px;
+}
+
+/* Secciones 2 y 3: Texto a la derecha */
+.seccion-2,
+.seccion-3 {
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.texto-derecha {
+    max-width: 600px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.texto-derecha.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.texto-derecha h2 {
+    font-family: "Source Serif 4", serif;
+    font-size: 70px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.frase-grande {
+    font-size: 28px;
+    line-height: 1.5;
+    font-style: italic;
+    color: #333;
+}
+
+.texto-final {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Footer */
+.sobre-mi-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.sobre-mi-footer .email {
+    font-size: 14px;
+    font-style: italic;
+    color: #d4a5a5;
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .foto-sticky {
+        width: 280px;
+        height: 360px;
+    }
+
+    .foto-sticky.moved-left {
+        left: 150px;
+        width: 250px;
+        height: 330px;
+    }
+
+    .seccion-2,
+    .seccion-3 {
+        padding-right: 50px;
+    }
+
+    .texto-derecha h2 {
+        font-size: 50px;
+    }
+
+    .frase-grande {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .foto-sticky {
+        width: 220px;
+        height: 280px;
+    }
+
+    .foto-sticky.moved-left {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 220px;
+        height: 280px;
+    }
+
+    .contenido-centrado h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        margin-bottom: 250px;
+    }
+
+    .seccion-2,
+    .seccion-3 {
+        justify-content: center;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .texto-derecha h2 {
+        font-size: 40px;
+    }
+
+    .frase-grande {
+        font-size: 20px;
+    }
+
+    .texto-final {
+        font-size: 16px;
+    }
+}
