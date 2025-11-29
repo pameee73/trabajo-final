@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1577.84 577.5">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        font-family: SourceSerif436pt-LightItalic, 'Source Serif 4 36pt';
+        font-size: 220px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #1d1d1b;
+      }
+
+      .cls-4 {
+        font-size: 385px;
+      }
+
+      .cls-4, .cls-5 {
+        font-family: ParfumerieScriptRegular, 'Parfumerie Script Regular';
+      }
+
+      .cls-5 {
+        font-size: 340px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <g id="Portada">
+    <text class="cls-3" transform="translate(261.51 311.04)"><tspan x="0" y="0">a</tspan><tspan class="cls-1" x="111.98" y="0">m</tspan><tspan x="285.99" y="0">e </tspan></text>
+    <text class="cls-3" transform="translate(904.22 311.04)"><tspan class="cls-8" x="0" y="0">o</tspan><tspan class="cls-6" x="103.18" y="0">r</tspan><tspan class="cls-7" x="176.66" y="0">q</tspan><tspan class="cls-9" x="281.6" y="0">u</tspan><tspan class="cls-2" x="399.73" y="0">e</tspan><tspan class="cls-6" x="488.17" y="0">r</tspan><tspan x="561.65" y="0">a</tspan></text>
+    <text class="cls-4" transform="translate(21.44 308)"><tspan x="0" y="0">P</tspan></text>
+    <text class="cls-5" transform="translate(671.97 276.6)"><tspan x="0" y="0">J</tspan></text>
+  </g>
+</svg>
