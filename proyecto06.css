@@ -1,0 +1,343 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Serif 4", serif;
+    background-color: #efecea;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navegación */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #efecea;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+nav.hidden {
+    transform: translateY(-100%);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6b4f9e;
+}
+
+.nav-links .active {
+    text-decoration: underline;
+}
+
+.nav-center {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 350px;
+}
+
+.btn-contacto {
+    background-color: #d4c5e8;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #6b4f9e;
+    color: white;
+}
+
+/* Botón de volver */
+.btn-volver {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    z-index: 1001;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-volver:hover {
+    background-color: #d4c5e8;
+    transform: translateX(-5px);
+}
+
+/* Header con fondo morado */
+.proyecto-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 70px;
+    background-color: #292558;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.proyecto-numero {
+    position: absolute;
+    top: -130px;
+    left: -350px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1;
+    color: white;
+    z-index: 10;
+}
+
+.proyecto-tipo {
+    position: absolute;
+    top: -130px;
+    right: -350px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: white;
+    z-index: 10;
+}
+
+/* Logo NDA */
+.logo-nda-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+.logo-nda {
+    max-width: 250px;
+    width: 90%;
+    height: auto;
+}
+
+.proyecto-descripcion {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proyecto-meta {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 200;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px solid white;
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.proyecto-herramientas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.proyecto-herramientas img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Sección afiches */
+.afiches-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    background-color: #eeebe9;
+    padding: 80px 60px;
+    align-items: center;
+}
+
+.afiche-grande {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.afiche-grande img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.afiche-pequeno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.afiche-pequeno img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Sección credenciales */
+.credenciales-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    
+    padding: 80px 60px;
+}
+
+.credencial-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credencial-item img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+   
+}
+
+/* Sección final */
+.final-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    background-color: #eeebe9;
+    padding: 80px 60px 100px 60px;
+}
+
+.final-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-item img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.proyecto-footer {
+    background-color: #e2e2e2;
+    color: #979797;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .afiches-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .credenciales-section,
+    .final-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+        font-size: 14px;
+    }
+    
+    .btn-volver {
+        top: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .proyecto-numero {
+        font-size: 40px;
+        left: 0;
+        top: -100px;
+        text-align: center;
+    }
+    
+    .proyecto-tipo {
+        font-size: 14px;
+        right: 0;
+        top: -100px;
+        text-align: center;
+    }
+    
+    .logo-nda {
+        max-width: 200px;
+    }
+    
+    .afiches-section,
+    .credenciales-section,
+    .final-section {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+}
