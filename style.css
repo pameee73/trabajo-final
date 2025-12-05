@@ -93,9 +93,9 @@ nav {
 }
 
 .logo-completo {
-    margin-top: 50px;
-    height: 450px;
-    width: auto;
+    margin-top: -250px;
+    height: 1000px;
+    max-width:  1400px;
 }
 /* Subtítulo "Diseñadora integral" */
 .hero-subtitle {
@@ -104,7 +104,7 @@ nav {
     border: 2px solid #8b7355;
     padding: 10px 30px;
     border-radius: 30px;
-    margin-top: -130px;
+    margin-top: -300px;
     margin-bottom: 10px;
     font-weight: 300;
     font-style: italic;
