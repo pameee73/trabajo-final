@@ -3,73 +3,410 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mí - Pame Jorquera</title>
-    <link rel="stylesheet" href="sobremi.css">
+    <title>Sobre Mí - Pamela Jorquera</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Source Serif 4", serif;
+            background-color: #efecea;
+            color: #2a2a2a;
+            line-height: 1.6;
+        }
+        
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #efecea;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            flex: 1;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4a5a5;
+        }
+
+        .nav-center {
+            font-size: 18px;
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+            margin-right: 350px;
+        }
+
+        .btn-contacto {
+            background-color: #f5c9c9;
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+            flex: 1;
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .btn-contacto:hover {
+            background-color: #f0b0b0;
+        }
+        
+        /* Container principal */
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 140px 60px 100px;
+        }
+        
+        /* Título SVG centrado */
+        .page-title {
+            text-align: center;
+            margin-bottom: 80px;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .title-svg {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Intro texto centrado */
+        .intro-section {
+            text-align: center;
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.2s forwards;
+        }
+        
+        .intro-text {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #555;
+            max-width: 580px;
+            margin: 0 auto;
+            letter-spacing: 0.3px;
+        }
+        
+        /* Foto centrada */
+        .photo-section {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 120px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.4s forwards;
+        }
+        
+        .photo-wrapper {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+        
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(70%);
+            transition: filter 0.6s ease, transform 0.6s ease;
+        }
+        
+        .photo-wrapper:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        /* Frase filosófica destacada */
+        .philosophy-section {
+            text-align: center;
+            margin-bottom: 120px;
+            padding: 0 40px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.6s forwards;
+        }
+        
+        .philosophy-text {
+            font-size: 32px;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 1.5;
+            color: #2a2a2a;
+            max-width: 700px;
+            margin: 0 auto;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Grid de información con línea divisoria */
+        .info-grid-section {
+            margin-bottom: 100px;
+            opacity: 0;
+            animation: fadeIn 1s ease 0.8s forwards;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 60px;
+            position: relative;
+        }
+        
+        /* Líneas divisorias verticales */
+        .info-grid::before,
+        .info-grid::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-grid::before {
+            left: 33.33%;
+        }
+        
+        .info-grid::after {
+            left: 66.66%;
+        }
+        
+        .info-column {
+            text-align: center;
+        }
+        
+        .info-column h3 {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        
+        .info-list {
+            list-style: none;
+        }
+        
+        .info-list li {
+            font-size: 14px;
+            line-height: 2;
+            color: #2a2a2a;
+            letter-spacing: 0.2px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .exp-role {
+            font-size: 13px;
+            color: #2a2a2a;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        
+        .exp-year {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        /* Software icons */
+        .software-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .software-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+            filter: grayscale(20%);
+        }
+        
+        .software-icon:hover {
+            transform: scale(1.2);
+            filter: grayscale(0%);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        footer p {
+            font-size: 13px;
+            color: #888;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px 30px;
+            }
+            
+            .main-container {
+                padding: 100px 30px 80px;
+            }
+            
+            .title-svg {
+                max-width: 300px;
+            }
+            
+            .philosophy-text {
+                font-size: 24px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .info-grid::before,
+            .info-grid::after {
+                display: none;
+            }
+            
+            .photo-wrapper {
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
     <nav>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+            <li><a href="sobremi.html">Sobre mí</a></li>
             <li><a href="index.html#indice">Índice</a></li>
-           
         </ul>
         <div class="nav-center">Portafolio</div>
         <a href="contacto.html" class="btn-contacto">Contacto</a>
     </nav>
 
-    <!-- Contenedor principal con scroll -->
-    <div class="scroll-container">
-        <!-- Foto que se mueve (sticky) -->
-        <div class="foto-sticky" id="foto-movil">
-            <img src="img/pame.webp" alt="Pamela Jorquera">
+    <!-- Container principal -->
+    <div class="main-container">
+        <!-- Título SVG -->
+        <div class="page-title">
+            <img src="img/sobremi.svg" alt="Sobre mí" class="title-svg">
         </div>
 
-        <!-- Sección 1: Título y descripción centrados -->
-        <section class="seccion-scroll seccion-1" data-section="1">
-            <div class="contenido-centrado">
-                <h1>Sobre<br>mí</h1>
-                <p class="descripcion">
-                    ¡Hola! Soy Pamela Jorquera, estudiante de Diseño Integral 
-                    en la Pontificia Universidad Católica de Chile, actualmente 
-                    cursando mi quinto semestre.
-                </p>
+        <!-- Intro -->
+        <section class="intro-section">
+            <p class="intro-text">
+                ¡Hola! mi nombre es Pamela Jorquera y tengo 21 años. Soy estudiante de Diseño Integral 
+                en la Pontificia Universidad Católica de Chile, actualmente cursando mi sexto semestre.
+            </p>
+        </section>
+
+        <!-- Foto -->
+        <section class="photo-section">
+            <div class="photo-wrapper">
+                <img src="img/pame.webp" alt="Pamela Jorquera">
             </div>
         </section>
 
-        <!-- Sección 2: Texto grande a la derecha -->
-        <section class="seccion-scroll seccion-2" data-section="2">
-            <div class="texto-derecha">
-                <h2>Sobre<br>mí</h2>
-                <p class="frase-grande">
-                    Me interesa el diseño como una 
-                    herramienta para observar, 
-                    conectar y transformar.
-                </p>
-            </div>
+        <!-- Filosofía -->
+        <section class="philosophy-section">
+            <p class="philosophy-text">
+                Me interesa el diseño como una herramienta para observar, conectar y transformar.
+            </p>
         </section>
 
-        <!-- Sección 3: Texto descriptivo a la derecha -->
-        <section class="seccion-scroll seccion-3" data-section="3">
-            <div class="texto-derecha">
-                <h2>Sobre<br>mí</h2>
-                <p class="texto-final">
-                    Me apasionan los proyectos que involucran narrativas visuales, 
-                    identidades gráficas y la aplicación del diseño desde lo cotidiano 
-                    hasta lo simbólico. Estoy siempre persona altamente adaptativa 
-                    dentro del diseño.
-                </p>
+        <!-- Grid de información -->
+        <section class="info-grid-section">
+            <div class="info-grid">
+                <div class="info-column">
+                    <h3>Áreas Interés</h3>
+                    <ul class="info-list">
+                        <li>Branding</li>
+                        <li>Diseño editorial</li>
+                        <li>Diseño publicitario</li>
+                    </ul>
+                </div>
+                
+                <div class="info-column">
+                    <h3>Experiencia</h3>
+                    <ul class="info-list">
+                        <li class="experience-item">
+                            <div class="exp-role">Encarga del área de diseño en NDA kids</div>
+                            <div class="exp-year">2024-2025</div>
+                        </li>
+                        <li class="experience-item">
+                            <div class="exp-role">Ayudante en taller de problematización y conceptualización</div>
+                            <div class="exp-year">2024</div>
+                        </li>
+                        <li class="experience-item">
+                            <div class="exp-role">Diseño publicitario para carrito de comida rápida "pirulo´s"</div>
+                            <div class="exp-year">2024</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="info-column">
+                    <h3>Softwares</h3>
+                    <div class="software-grid">
+                        <img src="img/id.webp" alt="InDesign" class="software-icon">
+                        <img src="img/ps.webp" alt="Photoshop" class="software-icon">
+                        <img src="img/ai.webp" alt="Illustrator" class="software-icon">
+                        <img src="img/figma.webp" alt="Figma" class="software-icon">
+                        <img src="img/rhino.webp" alt="Blender" class="software-icon">
+                        <img src="img/key.webp" alt="Procreate" class="software-icon">
+                        
+                    </div>
+                </div>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
-    <footer class="sobre-mi-footer">
-        <p>&copy; 2024 Pame Jorquera - Diseñadora Integral</p>
-        <p class="email">pamela.jorquera@uc.cl</p>
+    <footer>
+        <p>© 2024 Pamela Jorquera – Diseñadora Integral</p>
     </footer>
-
-    <script src="sobremi.js"></script>
 </body>
 </html>
