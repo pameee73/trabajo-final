@@ -4,16 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Pame Jorquera</title>
-    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Source Serif 4", serif;
+            background-color: #efecea;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #efecea;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+            flex: 1;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d4a5a5;
+        }
+
+        .nav-center {
+            font-size: 18px;
+            font-weight: bold;
+            flex: 1;
+            text-align: center;
+            margin-right: 350px;
+        }
+
+        .btn-contacto {
+            background-color: #f5c9c9;
+            padding: 10px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+            flex: 1;
+            text-align: center;
+            max-width: 150px;
+        }
+
+        .btn-contacto:hover {
+            background-color: #f0b0b0;
+        }
+
+        .btn-contacto.active {
+            text-decoration: underline;
+        }
+
+        /* Sección de contacto */
+        .contacto-section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 100px 50px;
+        }
+
+        /* Contenedor principal */
+        .contacto-content {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Caja de contacto */
+        .contacto-box {
+            background-color: #efecea;
+            border: 2px solid #b5a398;
+            border-radius: 30px;
+            padding: 60px 160px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            animation: slideUpCard 1.2s ease-out;
+        }
+
+        @keyframes slideUpCard {
+            0% {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .contacto-box h1 {
+            font-family: "Source Serif 4", serif;
+            font-size: 50px;
+            font-weight: 300;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out 0.3s backwards;
+        }
+
+        .contacto-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            animation: fadeIn 0.8s ease-out 0.6s backwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .email {
+            font-size: 15px;
+            font-style: italic;
+            color: #888;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 300;
+        }
+
+        .email:hover {
+            color: #d4a5a5;
+        }
+
+        .social {
+            font-size: 13px;
+            color: #888;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 400;
+        }
+
+        .social:hover {
+            color: #d4a5a5;
+        }
+
+        /* Flor decorativa en diagonal */
+        .flor-decorativa {
+            position: absolute;
+            bottom: -120px;
+            left: -80px;
+            width: 400px;
+            height: auto;
+            transform: rotate(-25deg);
+            z-index: 1;
+            opacity: 0.9;
+            animation: fadeInFlor 1s ease-out 0.4s backwards;
+            pointer-events: none;
+        }
+        
+        @keyframes fadeInFlor {
+            0% {
+                opacity: 0;
+                transform: rotate(-25deg) translateY(20px);
+            }
+            100% {
+                opacity: 0.9;
+                transform: rotate(-25deg) translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 14px;
+            }
+
+            .nav-center {
+                margin-right: 0;
+            }
+
+            .contacto-box {
+                padding: 50px 40px;
+            }
+
+            .contacto-box h1 {
+                font-size: 40px;
+            }
+
+            .flor-decorativa {
+                width: 250px;
+                bottom: 200px;
+                left: -40px;
+                top: 500px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navegación -->
     <nav>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="sobremi.html">Sobre mí</a></li>
             <li><a href="index.html#indice">Índice</a></li>
-            
         </ul>
         <div class="nav-center">Portafolio</div>
         <a href="contacto.html" class="btn-contacto active">Contacto</a>
@@ -21,11 +251,11 @@
 
     <!-- Sección de contacto -->
     <section class="contacto-section">
-        <!-- Contenido central -->
         <div class="contacto-content">
-            <!-- Imagen de puntos decorativos -->
-            <img src="img/fotopuntos.webp" alt="decoracion" class="puntos-decorativos">
+            <!-- Flor decorativa en diagonal -->
+            <img src="img/flor1.png" alt="Flor decorativa" class="flor-decorativa">
             
+            <!-- Caja de contacto -->
             <div class="contacto-box">
                 <h1>¡Contactame!</h1>
                 
